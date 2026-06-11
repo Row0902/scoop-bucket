@@ -15,13 +15,13 @@
     },
     "bin": [
         [
-            "run_main_windows.exe",
+            "run_main_window.exe",
             "vetube"
         ]
     ],
     "shortcuts": [
         [
-            "run_main_windows.exe",
+            "run_main_window.exe",
             "VeTube"
         ]
     ],
