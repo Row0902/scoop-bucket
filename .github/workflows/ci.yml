@@ -42,3 +42,8 @@ jobs:
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
           .\my_bucket\bin\test.ps1
+      - name: Check manifest formatting
+        if: matrix.shell == 'pwsh'
+        run: |
+          $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
+          .\my_bucket\bin\formatjson.ps1
