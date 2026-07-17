@@ -9,11 +9,22 @@
             "hash": "e690ae0ae8259ee2c23a00d011552d97361c2c5b36caea434e230c15b6f40e44"
         }
     },
+    "pre_install": [
+        "if (!(Test-Path \"$dir\\data.json\")) { Set-Content \"$dir\\data.json\" '{}' }",
+        "if (!(Test-Path \"$dir\\keymaps\")) { New-Item -ItemType Directory -Path \"$dir\\keymaps\" | Out-Null }",
+        "if (!(Test-Path \"$dir\\sounds\")) { New-Item -ItemType Directory -Path \"$dir\\sounds\" | Out-Null }"
+    ],
     "bin": [
         [
             "run_main_window.exe",
-            "vetube"
+            "vetube",
+            "--gui"
         ]
+    ],
+    "persist": [
+        "data.json",
+        "keymaps",
+        "sounds"
     ],
     "shortcuts": [
         [
@@ -29,6 +40,9 @@
             "64bit": {
                 "url": "https://github.com/metalalchemist/VeTube/releases/download/v$version/VeTube-x64.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }
