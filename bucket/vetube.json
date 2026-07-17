@@ -40,9 +40,6 @@
             "64bit": {
                 "url": "https://github.com/metalalchemist/VeTube/releases/download/v$version/VeTube-x64.zip"
             }
-        },
-        "hash": {
-            "url": "$url.sha256"
         }
     }
 }
