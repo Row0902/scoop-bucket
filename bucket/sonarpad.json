@@ -1,17 +1,17 @@
 {
-    "version": "0.8.2",
+    "version": "0.8.3",
     "description": "Bloc de notas moderno en Rust: lee archivos PDF/EPUB/DOCX, reproduce audiolibros MP3, crea audiolibros con síntesis de voz de alta calidad y gestiona marcadores.",
     "homepage": "https://github.com/Ambro86/Sonarpad",
     "license": "Unlicense",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Ambro86/Sonarpad/releases/download/v0.8.2/sonarpad_x64_en-US.msi",
-            "hash": "5b87285e0bcb1c76af76fd6c53d8367b38d7042e76ae5c3fcb90c41f3ef85fa8",
+            "url": "https://github.com/Ambro86/Sonarpad/releases/download/v0.8.3/sonarpad_x64_en-US.msi",
+            "hash": "da04ed3d204d0dbdba8ca1c30d54020f8f2f4b740ad70309003a9f01cff36344",
             "extract_dir": "PFiles\\Sonarpad"
         },
         "32bit": {
-            "url": "https://github.com/Ambro86/Sonarpad/releases/download/v0.8.2/sonarpad.exe",
-            "hash": "c49598c41c09867403507f55ec70fdfe5a0a6bf66c47abbb1e0d931a6b8173e3"
+            "url": "https://github.com/Ambro86/Sonarpad/releases/download/v0.8.3/sonarpad.exe",
+            "hash": "0a38c14f52c6f159fc629ce0922ad865ac7a281a114dacd55012f51db135aa2b"
         }
     },
     "bin": [
