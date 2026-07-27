@@ -1,12 +1,12 @@
 {
-    "version": "3.91",
+    "version": "3.92",
     "description": "Lee y gestiona de manera accesible el chat de tus directos o en los de tus creadores favoritos.",
     "homepage": "https://github.com/metalalchemist/VeTube",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/metalalchemist/VeTube/releases/download/v3.91/VeTube-x64.zip",
-            "hash": "c488106f9937dea082cfda7f5520265af44905f688e6a4bc4798d54ef982901c"
+            "url": "https://github.com/metalalchemist/VeTube/releases/download/v3.92/VeTube-x64.zip",
+            "hash": "846b9d3a79d4b16668d1db7847735d0a03acd05ab3c88a2e9e3b27746ecaf298"
         }
     },
     "pre_install": [
