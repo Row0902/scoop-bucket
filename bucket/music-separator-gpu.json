@@ -1,0 +1,48 @@
+{
+    "version": "1.6",
+    "description": "Graphical interface for audio source separation.",
+    "homepage": "https://github.com/GianlucaApollaro/Music-Separator-GUI",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/GianlucaApollaro/Music-Separator-GUI/releases/download/v1.6/Music_Separator_GUI_v1.6_Windows_GPU.7z",
+            "hash": "sha256:22370b393407d73cfa8ce62a20d4be36e41e42394817dc9fe57faf0489b1b19a"
+        }
+    },
+    "installer": {
+        "script": [
+            "if (!(Test-Path \"$dir\\config.json\")) {",
+            "    Set-Content -Path \"$dir\\config.json\" -Value '{}' -Encoding utf8",
+            "}"
+        ]
+    },
+    "bin": [
+        [
+            "Music separator.exe",
+            "music-separator",
+            "--gui"
+        ]
+    ],
+    "persist": [
+        "models",
+        "output",
+        "previews",
+        "config.json"
+    ],
+    "shortcuts": [
+        [
+            "Music separator.exe",
+            "Music Separator"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/GianlucaApollaro/Music-Separator-GUI"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/GianlucaApollaro/Music-Separator-GUI/releases/download/v$version/Music_Separator_GUI_v$version_Windows_GPU.7z"
+            }
+        }
+    }
+}
