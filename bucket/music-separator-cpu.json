@@ -9,6 +9,13 @@
             "hash": "sha256:f92005d3a4d78f50b3ea7b3455f74cad8bbc100d883c7dd6a55869cd5206d360"
         }
     },
+    "installer": {
+        "script": [
+            "if (!(Test-Path \"$dir\\config.json\")) {",
+            "    Set-Content -Path \"$dir\\config.json\" -Value '{}' -Encoding utf8",
+            "}"
+        ]
+    },
     "bin": [
         [
             "Music separator CPU.exe",
@@ -17,7 +24,7 @@
         ]
     ],
     "persist": [
-        "model",
+        "models",
         "output",
         "previews",
         "config.json"
