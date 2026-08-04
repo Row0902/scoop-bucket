@@ -14,11 +14,11 @@ body:
     label: Criteria
     description: For a package to be acceptable in this bucket, it should be
     options:
-    - label: Criteria 1
+    - label: The project is licensed under an open-source license.
       required: true
-    - label: Criteria 2
+    - label: The project has a stable release tag (not only pre-release or nightly).
       required: true
-    - label: Criteria 3
+    - label: The package is not already available in the ScoopInstaller main buckets.
       required: true
 - type: input
   attributes:
