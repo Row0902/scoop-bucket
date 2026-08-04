@@ -12,9 +12,12 @@ START = "<!-- apps-table:start -->"
 END = "<!-- apps-table:end -->"
 
 
-def manifest_version(path: Path) -> str:
+def manifest_data(path: Path) -> dict[str, str]:
     data = json.loads(path.read_text(encoding="utf-8"))
-    return str(data.get("version", ""))
+    return {
+        "version": str(data.get("version", "")),
+        "homepage": str(data.get("homepage", "")),
+    }
 
 
 def load_base_versions(path: Path) -> dict[str, str]:
@@ -35,13 +38,15 @@ def save_base_versions(path: Path, versions: dict[str, str]) -> None:
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def generate_table(base_versions: dict[str, str], latest_versions: dict[str, str]) -> str:
+def generate_table(base_versions: dict[str, str], manifest_info: dict[str, dict[str, str]]) -> str:
     rows = [
-        "| Nombre | Versión base | Última versión |",
-        "|---|---|---|",
+        "| Nombre | Versión base | Última versión | Sitio oficial |",
+        "|---|---|---|---|",
     ]
-    for name in sorted(latest_versions):
-        rows.append(f"| {name} | {base_versions[name]} | {latest_versions[name]} |")
+    for name in sorted(manifest_info):
+        latest_version = manifest_info[name]["version"]
+        homepage = manifest_info[name]["homepage"]
+        rows.append(f"| {name} | {base_versions[name]} | {latest_version} | {homepage} |")
     return "\n".join(rows)
 
 
@@ -62,19 +67,20 @@ def main() -> None:
     base_file = ROOT / ".github" / "apps-base-versions.tsv"
     base_versions = load_base_versions(base_file)
 
-    latest_versions = {}
+    manifest_info = {}
     for manifest in manifests:
         name = manifest.stem
-        latest = manifest_version(manifest)
-        latest_versions[name] = latest
+        info = manifest_data(manifest)
+        latest = info["version"]
+        manifest_info[name] = info
         if name not in base_versions:
             base_versions[name] = latest
 
     # Keep only current manifests
-    base_versions = {k: v for k, v in base_versions.items() if k in latest_versions}
+    base_versions = {k: v for k, v in base_versions.items() if k in manifest_info}
     save_base_versions(base_file, base_versions)
 
-    table = generate_table(base_versions, latest_versions)
+    table = generate_table(base_versions, manifest_info)
     readme_content = README.read_text(encoding="utf-8")
     README.write_text(replace_table(readme_content, table), encoding="utf-8")
 
