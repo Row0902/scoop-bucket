@@ -1,0 +1,30 @@
+name: Update README Apps Table
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'bucket/*.json'
+      - 'scripts/update-readme-apps-table.py'
+      - '.github/workflows/update-readme-apps.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Generate README apps table
+        run: python scripts/update-readme-apps-table.py
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: update README apps table"
+          file_pattern: README.md .github/apps-base-versions.tsv
