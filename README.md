@@ -4,7 +4,7 @@
 [![Excavator](https://github.com/Row0902/scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/Row0902/scoop-bucket/actions/workflows/excavator.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Repositorio personalizado de manifiestos para **[Scoop](https://scoop.sh)**, el instalador de paquetes por línea de comandos para Windows. 
+Repositorio personalizado de manifiestos para **[Scoop](https://scoop.sh)**, el instalador de paquetes por línea de comandos para Windows.
 
 Aquí se distribuyen herramientas de desarrollo, utilidades de audio, editores y aplicaciones de escritorio empaquetadas para su instalación rápida y limpia sin instaladores gráficos intrusivos ni permisos de administrador.
 
