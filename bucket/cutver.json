@@ -17,8 +17,12 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/cutver/cutver/releases/download/v$version/cutver-$version-x86_64-pc-windows-msvc.zip",
-                "extract_dir": "cutver-$version-x86_64-pc-windows-msvc"
+                "url": "https://github.com/cutver/cutver/releases/download/v$version/cutver-$version-windows-x86_64.zip",
+                "extract_dir": "cutver-$version-windows-x86_64"
+            },
+            "arm64": {
+                "url": "https://github.com/cutver/cutver/releases/download/v$version/cutver-$version-windows-arm64.zip",
+                "extract_dir": "cutver-$version-windows-arm64"
             }
         },
         "hash": {
