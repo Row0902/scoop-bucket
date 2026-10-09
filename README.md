@@ -62,7 +62,7 @@ scoop update *
 <!-- apps-table:start -->
 | Nombre | Versión base | Última versión | Sitio oficial |
 |---|---|---|---|
-| cutver | 0.8.0 | 0.10.0 | https://github.com/cutver/cutver |
+| cutver | 0.8.0 | 0.12.0 | https://github.com/cutver/cutver |
 | music-separator-cpu | 1.6 | 1.8 | https://github.com/GianlucaApollaro/Music-Separator-GUI |
 | music-separator-gpu | 1.6 | 1.8 | https://github.com/GianlucaApollaro/Music-Separator-GUI |
 | sonarpad | 0.8.4 | 0.9.12 | https://github.com/Ambro86/Sonarpad |
