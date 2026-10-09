@@ -1,13 +1,18 @@
 {
-    "version": "0.10.0",
+    "version": "0.12.0",
     "description": "Cut a release. Bump SemVer. Every project, every language.",
     "homepage": "https://github.com/cutver/cutver",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cutver/cutver/releases/download/v0.10.0/cutver-0.10.0-x86_64-pc-windows-msvc.zip",
-            "hash": "d8dfdd273f191ef19b37a3517604d651b40eff2d11a72857f46643448160c4e7",
-            "extract_dir": "cutver-0.10.0-x86_64-pc-windows-msvc"
+            "url": "https://github.com/cutver/cutver/releases/download/v0.12.0/cutver-0.12.0-windows-x86_64.zip",
+            "hash": "faa435d879e1f86d639dccc93f047a87241aa9bec9e0d5d2f8aa8ddfcf406857",
+            "extract_dir": "cutver-0.12.0-windows-x86_64"
+        },
+        "arm64": {
+            "url": "https://github.com/cutver/cutver/releases/download/v0.12.0/cutver-0.12.0-windows-arm64.zip",
+            "hash": "1018176aa3abe35905767fe784106445782d3d24a0d86ec949084992e096e39d",
+            "extract_dir": "cutver-0.12.0-windows-arm64"
         }
     },
     "bin": "cutver.exe",
