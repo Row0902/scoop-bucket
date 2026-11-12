@@ -1,18 +1,18 @@
 {
-    "version": "0.15.0",
+    "version": "0.16.0",
     "description": "Cut a release. Bump SemVer. Every project, every language.",
     "homepage": "https://github.com/cutver/cutver",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cutver/cutver/releases/download/v0.15.0/cutver-0.15.0-windows-x86_64.zip",
-            "hash": "9e3939aa28bc91c28cdf9b420f54c09c2f6f06b34f83550b722f314de9ca99fa",
-            "extract_dir": "cutver-0.15.0-windows-x86_64"
+            "url": "https://github.com/cutver/cutver/releases/download/v0.16.0/cutver-0.16.0-windows-x86_64.zip",
+            "hash": "2a2e907d571cf40d9d07a1001e04f98a22b57cb6ada2ddb84bae2fc4e3707324",
+            "extract_dir": "cutver-0.16.0-windows-x86_64"
         },
         "arm64": {
-            "url": "https://github.com/cutver/cutver/releases/download/v0.15.0/cutver-0.15.0-windows-arm64.zip",
-            "hash": "1b123da01404d0a8990a0d7fdaf41bde65adf88d38a0f158468aea672b03a152",
-            "extract_dir": "cutver-0.15.0-windows-arm64"
+            "url": "https://github.com/cutver/cutver/releases/download/v0.16.0/cutver-0.16.0-windows-arm64.zip",
+            "hash": "212fe13f79123f09d675a0948032cd1718cf14eeac9734a73ec95b1ca5c03ca7",
+            "extract_dir": "cutver-0.16.0-windows-arm64"
         }
     },
     "bin": "cutver.exe",
