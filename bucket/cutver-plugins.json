@@ -1,19 +1,19 @@
 {
-    "version": "0.18.0",
+    "version": "0.18.1",
     "description": "Cut a release. Bump SemVer. Every project, every language. (Plugin-enabled build)",
     "homepage": "https://github.com/cutver/cutver",
     "license": "MIT",
     "notes": "Plugin-enabled build. Install either this or cutver, not both. If both were installed, run: scoop reset cutver-plugins",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/cutver/cutver/releases/download/v0.18.0/cutver-plugins-0.18.0-windows-x86_64.zip",
-            "hash": "cdfaea1653bbfb7f3f4eaecd41ac96b78b911d9680a6fd18e47f0c1e3e58a8ec",
-            "extract_dir": "cutver-plugins-0.18.0-windows-x86_64"
+            "url": "https://github.com/cutver/cutver/releases/download/v0.18.1/cutver-plugins-0.18.1-windows-x86_64.zip",
+            "hash": "bb040315d1fd9831a9aed17c3b6827323b08f831e9dae078988a83f2a4fe0a0c",
+            "extract_dir": "cutver-plugins-0.18.1-windows-x86_64"
         },
         "arm64": {
-            "url": "https://github.com/cutver/cutver/releases/download/v0.18.0/cutver-plugins-0.18.0-windows-arm64.zip",
-            "hash": "160d3d7e508103daf984974c39ca6be0ee42a4fbf40d63a978c13fd12381c77d",
-            "extract_dir": "cutver-plugins-0.18.0-windows-arm64"
+            "url": "https://github.com/cutver/cutver/releases/download/v0.18.1/cutver-plugins-0.18.1-windows-arm64.zip",
+            "hash": "e10d8e0a7ce02be0e016b939ea50ce10b3be3aa53a7f949bbe6685cbb136f49d",
+            "extract_dir": "cutver-plugins-0.18.1-windows-arm64"
         }
     },
     "bin": "cutver.exe",
