@@ -1,0 +1,38 @@
+{
+    "version": "3.2.1",
+    "description": "Interfaz gráfica para yt-dlp: descarga video y audio de YouTube y de cientos de sitios en Windows, macOS y Linux.",
+    "homepage": "https://github.com/jely2002/youtube-dl-gui",
+    "license": "AGPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jely2002/youtube-dl-gui/releases/download/app-v3.2.1/Open.Video.Downloader_3.2.1_x64-portable.zip",
+            "hash": "194aa37c9d82ea55014f5ddef3f772349bc342202a0513e4d4f40752a0eaf09b"
+        },
+        "arm64": {
+            "url": "https://github.com/jely2002/youtube-dl-gui/releases/download/app-v3.2.1/Open.Video.Downloader_3.2.1_arm64-portable.zip",
+            "hash": "1a5308fd51f7a2fe5da4db4f56b4363ca22e8007cfe7dc9d1ed0b4e61cc948b4"
+        }
+    },
+    "pre_install": "Get-ChildItem \"$dir\\Open.Video.Downloader_*.exe\" | Rename-Item -NewName 'open-video-downloader.exe'",
+    "shortcuts": [
+        [
+            "open-video-downloader.exe",
+            "Open Video Downloader"
+        ]
+    ],
+    "persist": "ovd-portable",
+    "checkver": {
+        "github": "https://github.com/jely2002/youtube-dl-gui",
+        "regex": "app-v([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jely2002/youtube-dl-gui/releases/download/app-v$version/Open.Video.Downloader_$version_x64-portable.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/jely2002/youtube-dl-gui/releases/download/app-v$version/Open.Video.Downloader_$version_arm64-portable.zip"
+            }
+        }
+    }
+}
