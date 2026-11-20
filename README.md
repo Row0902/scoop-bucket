@@ -68,7 +68,7 @@ scoop update *
 | music-separator-gpu | 1.6 | 1.8 | https://github.com/GianlucaApollaro/Music-Separator-GUI |
 | open-video-downloader | 3.2.1 | 3.2.1 | https://github.com/jely2002/youtube-dl-gui |
 | sonarpad | 0.8.4 | 0.9.32 | https://github.com/Ambro86/Sonarpad |
-| vetube | 3.94 | 3.94 | https://github.com/metalalchemist/VeTube |
+| vetube | 3.94 | 3.96 | https://github.com/metalalchemist/VeTube |
 <!-- apps-table:end -->
 
 ---

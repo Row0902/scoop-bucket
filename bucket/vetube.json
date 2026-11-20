@@ -1,36 +1,43 @@
 {
-    "version": "3.94",
+    "version": "3.96",
     "description": "Lee y gestiona de manera accesible el chat de tus directos o en los de tus creadores favoritos.",
     "homepage": "https://github.com/metalalchemist/VeTube",
     "license": "GPL-3.0",
+    "notes": [
+        "VeTube trae su propio actualizador (canal stable/beta en data.json). Con Scoop, actualiza con 'scoop update vetube'.",
+        "Si prefieres que se actualice solo desde la app, ejecuta 'scoop hold vetube'."
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://github.com/metalalchemist/VeTube/releases/download/v3.94/VeTube-x64.zip",
-            "hash": "b4f56c324ff002f1dd8eb2a887753ddbcacb3cd6849338cdc12197612252d8ee"
+            "url": "https://github.com/metalalchemist/VeTube/releases/download/v3.96/vetube-v3.96.zip",
+            "hash": "eed0648927e1d896c0d1b27408c351500e27b956272db5b0c33350c5bd6a3f91"
         }
     },
     "pre_install": [
         "if (!(Test-Path \"$dir\\data.json\")) { Set-Content \"$dir\\data.json\" '{}' }",
-        "if (!(Test-Path \"$dir\\keymaps\")) { New-Item -ItemType Directory -Path \"$dir\\keymaps\" | Out-Null }",
-        "if (!(Test-Path \"$dir\\sounds\")) { New-Item -ItemType Directory -Path \"$dir\\sounds\" | Out-Null }"
+        "if (!(Test-Path \"$dir\\favoritos.json\")) { Set-Content \"$dir\\favoritos.json\" '[]' }",
+        "if (!(Test-Path \"$dir\\mensajes_destacados.json\")) { Set-Content \"$dir\\mensajes_destacados.json\" '[]' }",
+        "if (!(Test-Path \"$dir\\voices\")) { New-Item -ItemType Directory -Path \"$dir\\voices\" | Out-Null }",
+        "if (!(Test-Path \"$dir\\engines\")) { New-Item -ItemType Directory -Path \"$dir\\engines\" | Out-Null }"
     ],
     "bin": [
         [
-            "run_main_window.exe",
-            "vetube",
-            "--gui"
+            "VeTube.exe",
+            "vetube"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "VeTube.exe",
+            "VeTube"
         ]
     ],
     "persist": [
         "data.json",
-        "keymaps",
-        "sounds"
-    ],
-    "shortcuts": [
-        [
-            "run_main_window.exe",
-            "VeTube"
-        ]
+        "favoritos.json",
+        "mensajes_destacados.json",
+        "voices",
+        "engines"
     ],
     "checkver": {
         "github": "https://github.com/metalalchemist/VeTube"
@@ -38,8 +45,11 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/metalalchemist/VeTube/releases/download/v$version/VeTube-x64.zip"
+                "url": "https://github.com/metalalchemist/VeTube/releases/download/v$version/vetube-v$version.zip"
             }
+        },
+        "hash": {
+            "url": "$url.sha256"
         }
     }
 }
