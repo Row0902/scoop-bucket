@@ -62,8 +62,8 @@ scoop update *
 <!-- apps-table:start -->
 | Nombre | Versión base | Última versión | Sitio oficial |
 |---|---|---|---|
-| cutver | 0.8.0 | 0.20.0 | https://github.com/cutver/cutver |
-| cutver-plugins | 0.13.0 | 0.20.0 | https://github.com/cutver/cutver |
+| cutver | 0.8.0 | 0.21.0 | https://github.com/cutver/cutver |
+| cutver-plugins | 0.13.0 | 0.21.0 | https://github.com/cutver/cutver |
 | music-separator-cpu | 1.6 | 1.8 | https://github.com/GianlucaApollaro/Music-Separator-GUI |
 | music-separator-gpu | 1.6 | 1.8 | https://github.com/GianlucaApollaro/Music-Separator-GUI |
 | open-video-downloader | 3.2.1 | 3.2.1 | https://github.com/jely2002/youtube-dl-gui |
